@@ -1,5 +1,5 @@
 // const API = process.env.REACT_APP_PELICULAS_API
-const API = 'https://api.themoviedb.org/3'
+const API = 'https://api.themoviedb.org/3/'
 export async function Get(path) {
     const result = await fetch(API + path, {
         headers: {
