@@ -8,7 +8,7 @@ const ContextCard=()=>{
 
     const [movies, setMovies] = useState([])
     useEffect(()=>{
-        Get('/discover/movie/')
+        Get('/discover/movie')
         .then((data)=> {
             setMovies(data.results)
             // console.log('desde la api',data)
