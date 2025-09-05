@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1 className='title'>
-          🎬 Movies 2023
+          🎬 Movies 2025
         </h1>
       </header>
       <MyRoutes/>
