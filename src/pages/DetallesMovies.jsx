@@ -5,7 +5,7 @@ import { getMovieImg } from '../utils/getMovieImg'
 import './Detalles.css'
 import { Link } from 'react-router-dom'
 
-const Detalles = ()=> {
+const DetallesMovies = ()=> {
 
     const {movieId} = useParams()
     const [movie, setMovie] = useState([])
@@ -39,4 +39,4 @@ const Detalles = ()=> {
     )
 }
 
-export {Detalles}
+export {DetallesMovies}
