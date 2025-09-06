@@ -7,32 +7,32 @@ import { Link } from 'react-router-dom'
 
 const DetallesSeries = ()=> {
 
-    const {serieId} = useParams()
-    const [serie, setSerie] = useState([])
+    const {tvId} = useParams()
+    const [tv, setTv] = useState([])
     const [generos, setGeneros] = useState([])
 
     useEffect(()=>{
-        Get('/tv/' + serieId).then((data)=>{
-            setSerie(data)
+        Get('/tv/' + tvId).then((data)=>{
+            setTv(data)
             setGeneros(data.genres[0])
         });
-    },[serieId]);
+    },[tvId]);
 
-    const imageURL = getSerieImg(serie.poster_path, 500)
+    const imageURL = getSerieImg(tv.poster_path, 500)
     return(
         <div className='datailcontainer '>
             <Link to = {'/'}>
-            <img className='col movieimage' src={imageURL} alt={serie.title} />
+            <img className='col movieimage' src={imageURL} alt={tv.title} />
             </Link>
             <div className='col moviedetail'>
                 
                 <h4 className='title'>
                     <strong>Titulo: </strong>
-                    {serie.title}
+                    {tv.name}
                 </h4>
                
                 <p>Genere: {generos.name}</p>
-                <p>Description: {serie.overview}</p>
+                <p>Description: {tv.overview}</p>
             </div>
             
         </div>

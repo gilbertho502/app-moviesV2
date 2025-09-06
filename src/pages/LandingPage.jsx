@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 const LandingPage = () => {
   return (
     <div>
+      <h1 style={{ marginTop: 20, display: "flex", justifyContent: "center", alignItems: "center" }}>
+        Que quieres ver?</h1>
   <Row gutter={24} 
         justify="center" 
         style={{ marginTop: 20 }}>
